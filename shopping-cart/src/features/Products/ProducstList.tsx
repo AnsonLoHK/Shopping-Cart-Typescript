@@ -20,14 +20,15 @@ const initialProducst = [
   },
 ];
 
-interface Product {
+// TODO: 定義 useState 初始值的 interface
+export interface Product {
   title: string;
-  price: string;
+  price: number;
   id: string;
 }
 
 const ProducstList: React.FC<ProducstListProps> = ({}) => {
-  const [products, setProducts] = useState(initialProducst);
+  const [products, setProducts] = useState<Product[]>(initialProducst);
 
   const AddProduct = () =>
     setProducts((prevProducts) => [
@@ -77,5 +78,5 @@ export const ButtonPrimary: React.FC<ButtonProps> = (props) => {
   return <button {...rest}>{children}</button>;
 };
 
-// TODO!: 參考
+// TODO!: 參考資源
 // https://stackoverflow.com/questions/60436233/creating-a-custom-button-in-react-typescript-and-add-onclick-event
