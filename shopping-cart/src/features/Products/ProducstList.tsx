@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ButtonPrimary } from "../../types/button";
 
 interface ProducstListProps {}
 
@@ -61,22 +62,6 @@ const ProducstList: React.FC<ProducstListProps> = ({}) => {
 };
 
 export default ProducstList;
-
-// TODO: 定義 Button
-export interface ButtonProps
-  extends React.DetailedHTMLProps<
-      React.ButtonHTMLAttributes<HTMLButtonElement>,
-      HTMLButtonElement
-    >,
-    React.AriaAttributes {
-  oneOfYourProps: unknown;
-}
-
-export const ButtonPrimary: React.FC<ButtonProps> = (props) => {
-  const { children, ...rest } = props;
-
-  return <button {...rest}>{children}</button>;
-};
 
 // TODO!: 參考資源
 // https://stackoverflow.com/questions/60436233/creating-a-custom-button-in-react-typescript-and-add-onclick-event
