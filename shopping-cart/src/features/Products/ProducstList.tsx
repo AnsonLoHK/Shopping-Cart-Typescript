@@ -3,33 +3,8 @@ import { ButtonPrimary } from "../../types/button";
 
 interface ProducstListProps {}
 
-const initialProducst = [
-  {
-    title: "purple",
-    price: 50,
-    id: "eft",
-  },
-  {
-    title: "hunt purple",
-    price: 50,
-    id: "hunt",
-  },
-  {
-    title: "hll purple",
-    price: 50,
-    id: "hll",
-  },
-];
-
-// TODO: 定義 useState 初始值的 interface
-export interface Product {
-  title: string;
-  price: number;
-  id: string;
-}
-
 const ProducstList: React.FC<ProducstListProps> = ({}) => {
-  const [products, setProducts] = useState<Product[]>(initialProducst);
+  const [products, setProducts] = useState();
 
   const AddProduct = () =>
     setProducts((prevProducts) => [

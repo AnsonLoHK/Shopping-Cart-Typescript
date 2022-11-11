@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import productsReducer from "../features/Products/products.slice";
 
 // TODO: Create a Redux Store
 export const store = configureStore({
   reducer: {
+    // TODO: 引用 slice裡的reducer
+    products: productsReducer, // products
     // posts: postsReducer,
     // comments: commentsReducer,
     // users: usersReducer,
